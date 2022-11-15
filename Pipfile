@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 asana = "*"
 pynvim = "*"
+fuzzywuzzy = "*"
+python-levenshtein = "*"
 
 [dev-packages]
 
