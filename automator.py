@@ -16,12 +16,16 @@ projects = client.projects.find_all({'workspace': workspace_gid})
 # Print the name of each project
 for project in projects:
     print(project)
+    tasks = client.tasks.get_tasks_for_project(project['gid'], {}, opt_pretty=True)
+    for task in tasks:
+        print(task)
+
 
 # Get the list of tasks
-tasks = client.tasks.find_all({'workspace': workspace_gid})
+# tasks = client.tasks.find_all({'workspace': workspace_gid})
 
 # Print the name of each task
-for task in tasks:
-    print(task['name'])
+# for task in tasks:
+#     print(task['name'])
 
 
